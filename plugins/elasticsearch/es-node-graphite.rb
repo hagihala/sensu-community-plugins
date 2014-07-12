@@ -99,7 +99,7 @@ class ESMetrics < Sensu::Plugin::Metric::CLI::Graphite
     stats_enabled? 'indices' and node['indices'].each do |type,  index|
       index.each do |k, v|
         unless (k =~ /(_time|memory|size$)/)
-          metrics["indicies.#{type}.#{k}"] = v
+          metrics["indices.#{type}.#{k}"] = v
         end
       end
     end
