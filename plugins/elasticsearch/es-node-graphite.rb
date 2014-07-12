@@ -92,7 +92,7 @@ class ESMetrics < Sensu::Plugin::Metric::CLI::Graphite
 
     node = stats['nodes'].values.first
     #timestamp = Time.now.to_i
-    timestamp = node['timestamp'].to_i
+    timestamp = node['timestamp'].to_i / 1000
 
     metrics = {}
 
