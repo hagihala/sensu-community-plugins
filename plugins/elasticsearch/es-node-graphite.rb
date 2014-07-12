@@ -144,7 +144,7 @@ class ESMetrics < Sensu::Plugin::Metric::CLI::Graphite
 
     stats_enabled? 'thread_pool' and node['thread_pool'].each do |pool, stat|
       stat.each do |k, v|
-        metrics["tread_pool.#{pool}.#{k}"] = v
+        metrics["thread_pool.#{pool}.#{k}"] = v
       end
     end
 
